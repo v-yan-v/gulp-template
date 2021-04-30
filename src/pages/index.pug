@@ -1,0 +1,17 @@
+extends common/baseLayout
+
+block metaDescriptions
+  title gulp template - pug-index
+
+  //- Set up page description
+  meta(name='description' content='pug index layout - gulp template')
+  meta(name='keywords' content='indexLayout, pug, gulp')
+
+block content
+  //- стандартное поведение директивы `block FOO`- заменить содержимое наследуемого блока FOO тем что указано здесь
+  //- чтобы сохранить наследуемое содержимое можно использовать `append FOO` или `prepend FOO`
+  h2 some h2 title
+  include includes/index/banner
+  p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa magnam nobis omnis tempora vero, voluptatem? Architecto beatae dolorum, eaque ex odio quidem recusandae? Dicta hic libero officia omnis quos suscipit?
+  img.image(src='https://loremflickr.com/150/150/nature' alt='nature')
+  p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus ipsum, odio. Accusantium deserunt dolorem explicabo fuga, natus quod unde velit.

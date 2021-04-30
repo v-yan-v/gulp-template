@@ -1,0 +1,50 @@
+doctype html
+html(lang='en' class='no-js')
+  head
+    block head
+      meta(charset='UTF-8')
+      meta(name='viewport' content='width=device-width, user-scalable=yse, initial-scale=1.0, maximum-scale=5.0, minimum-scale=0.5')
+      meta(http-equiv='X-UA-Compatible' content='ie-edge')
+      meta(name='theme-color' content='#444444')
+
+      block metaDescriptions
+        title gulp template - pug baseLayout
+
+        //- Set up page description
+        meta(name='description' content='pug base layout - gulp template')
+        meta(name='keywords' content='baseLayout, template, pug, gulp')
+
+      block metaSocials
+        //- Set up data for preview when share page with socials
+        meta(property='og:title' content='')
+        meta(property='og:type' content='')
+        meta(property='og:url' content='')
+        meta(property='og:image' content='')
+
+      block metaFavicon
+        link(rel='manifest' href='site.webmanifest')
+        link(rel='apple-touch-icon' href='icon.png')
+        //- Place favicon.ico on the root directory
+
+      block headStyles
+        //- place Styles and Fonts here
+        link(rel='stylesheet' href='css/styles.min.css')
+
+      block headScripts
+        //- place here the async Scripts that important to load as soon as possible
+
+
+  body
+    block header
+      include header
+
+    block content
+      aside
+        p SOME DEFAULT CONTENT
+      //- include some content here
+
+    block footer
+      include footer
+
+    block scripts
+      script(src='js/scripts.min.js')
