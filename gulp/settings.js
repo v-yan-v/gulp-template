@@ -31,4 +31,5 @@ module.exports = {
   engine,
   engineExt,
   paths,
+  output,
 }
