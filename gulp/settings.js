@@ -11,12 +11,19 @@ const engine = 'pug'
 const engineExt = 'pug'
 
 const paths = {
+  // Output dirs
   html: output,
   css: output + '/css',
   js: output + '/js',
+  fonts: output + '/fonts',
+  img: output + '/img',
+  
+  // Sources dirs
   templates: ['src/pages/**/*.' + engineExt, '!src/pages/common/**/*.' + engineExt, '!src/pages/includes/**/*.' + engineExt],
   styles: ['src/styles/*.' + preprocessor],
-  scripts: ['src/js/*.js'],
+  scripts: ['src/scripts/*.js'],
+  fontsSrc: ['src/fonts/*'],
+  images: ['src/images/**/*'],
 }
 
 module.exports = {
