@@ -8,12 +8,13 @@ const preprocessor = 'sass'
 
 // set up template engine
 const engine = 'pug'
+const engineExt = 'pug'
 
 const paths = {
   html: output,
   css: output + '/css',
   js: output + '/js',
-  templates: ['src/pages/**/*.' + engine, '!src/pages/common/**/*.' + engine, '!src/pages/includes/**/*.' + engine],
+  templates: ['src/pages/**/*.' + engineExt, '!src/pages/common/**/*.' + engineExt, '!src/pages/includes/**/*.' + engineExt],
   styles: ['src/styles/*.' + preprocessor],
   scripts: ['src/js/*.js'],
 }
@@ -21,5 +22,6 @@ const paths = {
 module.exports = {
   preprocessor,
   engine,
+  engineExt,
   paths,
 }

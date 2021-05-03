@@ -10,9 +10,12 @@ const autoprefixer = require('gulp-autoprefixer')
 const sourcemaps = require('gulp-sourcemaps')
 const shorthand = require('gulp-shorthand')
 
+const sources = settings.paths.styles.concat([
+  'some/additional/styles/*.' + preprocessor,
+])
 
 const vanillaCSS = () => {
-  return src(settings.paths.styles)
+  return src(sources)
     .pipe(sourcemaps.init())
     .pipe(include())
     .on('error', console.log)
@@ -25,7 +28,7 @@ const vanillaCSS = () => {
 }
 
 const doCSS = () => {
-  return src(settings.paths.styles)
+  return src(sources)
     .pipe(plumber())
     .pipe(sourcemaps.init())
     .pipe(include())

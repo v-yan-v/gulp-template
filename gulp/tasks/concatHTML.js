@@ -2,12 +2,11 @@ const {src, dest} = require('gulp')
 
 const include = require('gulp-include')
 const htmlValidator = require('gulp-w3c-html-validator')
+const settings = require('../settings')
 
-const htmlSource = [
-    'src/pages/**/*.html',
-    '!src/pages/common/**/*.html',
-    '!src/pages/includes/**/*.html',
-  ]
+const htmlSource = settings.paths.templates.concat([
+    'some/additional/files/*.html',
+  ])
 
 const concatHTML = () => {
   return src(htmlSource)
