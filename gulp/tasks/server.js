@@ -29,11 +29,11 @@ const runServ = (cb) => {
     host: "192.170.150.230", // Override host detection if you know the correct IP to use
   })
   
-  watch(settings.paths.templates, series(
+  watch('src/pages/**/*', series(
     settings.engine === 'html' ? concatHTML : template2html,
     readyReload
   ))
-  watch(settings.paths.styles, series(styles, cb => src(settings.paths.css).pipe(server.stream()).on('end', cb)))
+  watch('src/styles/**/*', series(styles, cb => src(settings.paths.css).pipe(server.stream()).on('end', cb)))
   watch(settings.paths.scripts, series(scripts, readyReload))
   watch(settings.paths.images, series(images.minify, readyReload))
   watch(settings.paths.fontsSrc, series(fonts, readyReload))
